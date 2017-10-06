@@ -17,6 +17,9 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 * Salud del NPC.
 	 */
 	private int salud;
+	
+	private int saludTope;
+	
 	/**
 	 * Dificultad aleatoria NPC.
 	 */
@@ -89,6 +92,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1) +
 				(nivel - 1) * MULTIPLICADORF * (dificultad + 1));
 		this.salud = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
+		this.saludTope = salud;
 		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1) +
 				(nivel - 1) * MULTIPLICADORD * (dificultad + 1));
 	}
@@ -127,6 +131,9 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	@Override
 	public final int getSalud() {
 		return salud;
+	}
+	public final int getSaludTope() {
+		return saludTope;
 	}
 
 	/**
