@@ -11,16 +11,19 @@ import javax.imageio.ImageIO;
  * Clase que representa los Items que posee el personaje.
  */
 public class Item implements Serializable {
-    private final int idItem;
-    private final String foto;
-    private final String nombre;
-    private final int wearLocation;
-    private final int bonusSalud;
-    private final int bonusEnergia;
-    private final int bonusFuerza;
-    private final int bonusDestreza;
-    private final int bonusInteligencia;
-    private final String fotoEquipado;
+    private int idItem;
+    private String nombre;
+    private int wearLocation;
+    private int bonusSalud;
+    private int bonusEnergia;
+    private int bonusFuerza;
+    private int bonusDestreza;
+    private int bonusInteligencia;
+    private String foto;
+    private String fotoEquipado;
+    private int fuerzaRequerida;
+    private int destrezaRequerida;
+    private int inteligenciarequerida;
 
     /**
      * Constructor del Item.
@@ -61,6 +64,25 @@ public class Item implements Serializable {
         this.bonusDestreza = bonusDestreza;
         this.bonusInteligencia = bonusInteligencia;
         this.fotoEquipado = fotoEquipado;
+        this.fuerzaRequerida = 0;
+        this.destrezaRequerida = 0;
+        this.inteligenciarequerida = 0;
+    }
+
+    public Item() {
+        this.foto = "";
+        this.idItem = 0;
+        this.nombre = "";
+        this.wearLocation = 0;
+        this.bonusSalud = 0;
+        this.bonusEnergia = 0;
+        this.bonusFuerza = 0;
+        this.bonusDestreza = 0;
+        this.bonusInteligencia = 0;
+        this.fotoEquipado = "";
+        this.fuerzaRequerida = 0;
+        this.destrezaRequerida = 0;
+        this.inteligenciarequerida = 0;
     }
 
     /**
@@ -75,67 +97,108 @@ public class Item implements Serializable {
         return ImageIO.read(new File("recursos//" + foto));
     }
 
-    /**
-     * Método que retorna el nombre del item.
-     * 
-     * @return Retorna el nombre del item.
-     */
+    public int getIdItem() {
+        return idItem;
+    }
+
+    public void setIdItem(final int idItem) {
+        this.idItem = idItem;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(final String foto) {
+        this.foto = foto;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    /**
-     * Método que retorna el bonus de salud del item.
-     * 
-     * @return Retorna bonus de salud.
-     */
+    public void setNombre(final String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getWearLocation() {
+        return wearLocation;
+    }
+
+    public void setWearLocation(final int wearLocation) {
+        this.wearLocation = wearLocation;
+    }
+
     public int getBonusSalud() {
         return bonusSalud;
     }
 
-    /**
-     * Método que retorna el bonus de energia del item.
-     * 
-     * @return Retorna bonus de energia.
-     */
+    public void setBonusSalud(final int bonusSalud) {
+        this.bonusSalud = bonusSalud;
+    }
+
     public int getBonusEnergia() {
         return bonusEnergia;
     }
 
-    /**
-     * Método que retorna el bonus de fuerza del item.
-     * 
-     * @return Retorna bonus de fuerza.
-     */
+    public void setBonusEnergia(final int bonusEnergia) {
+        this.bonusEnergia = bonusEnergia;
+    }
+
     public int getBonusFuerza() {
         return bonusFuerza;
     }
 
-    /**
-     * Método que retorna el bonus de destreza del item.
-     * 
-     * @return Retorna bonus de destreza.
-     */
+    public void setBonusFuerza(final int bonusFuerza) {
+        this.bonusFuerza = bonusFuerza;
+    }
+
     public int getBonusDestreza() {
         return bonusDestreza;
     }
 
-    /**
-     * Método que retorna el bonus de inteligencia del item.
-     * 
-     * @return Retorna bonus de inteligencia.
-     */
+    public void setBonusDestreza(final int bonusDestreza) {
+        this.bonusDestreza = bonusDestreza;
+    }
+
     public int getBonusInteligencia() {
         return bonusInteligencia;
     }
 
-    /**
-     * Método que retorna el id del item.
-     * 
-     * @return Retorna el id del item.
-     */
-    public int getIdItem() {
-        return idItem;
+    public void setBonusInteligencia(final int bonusInteligencia) {
+        this.bonusInteligencia = bonusInteligencia;
+    }
+
+    public int getFuerzaRequerida() {
+        return fuerzaRequerida;
+    }
+
+    public void setFuerzaRequerida(final int fuerzaRequerida) {
+        this.fuerzaRequerida = fuerzaRequerida;
+    }
+
+    public int getDestrezaRequerida() {
+        return destrezaRequerida;
+    }
+
+    public void setDestrezaRequerida(final int destrezaRequerida) {
+        this.destrezaRequerida = destrezaRequerida;
+    }
+
+    public String getFotoEquipado() {
+        return fotoEquipado;
+    }
+
+    public void setFotoEquipado(final String fotoEquipado) {
+        this.fotoEquipado = fotoEquipado;
+    }
+
+    public int getInteligenciarequerida() {
+        return inteligenciarequerida;
+    }
+
+    public void setInteligenciarequerida(final int inteligenciarequerida) {
+        this.inteligenciarequerida = inteligenciarequerida;
     }
 
 }
