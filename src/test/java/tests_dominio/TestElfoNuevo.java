@@ -9,7 +9,7 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Personaje;
 
-public class TestElfoNuevo {
+ public class TestElfoNuevo {
 
 	@Test
 	public void testHabilidadRaza1() {

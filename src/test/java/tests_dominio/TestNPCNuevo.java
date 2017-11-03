@@ -9,7 +9,7 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
-public class TestNPCNuevo {
+ public class TestNPCNuevo {
 
 	@Test
 	public void testNivelNPC1() {

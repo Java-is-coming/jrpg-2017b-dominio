@@ -10,7 +10,7 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Orco;
 
-public class TestOrco {
+ public class TestOrco {
 
 	@Test
 	public void testGolpeDefensivo() {

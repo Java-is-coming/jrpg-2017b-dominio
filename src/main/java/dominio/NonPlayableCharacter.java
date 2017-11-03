@@ -8,7 +8,7 @@ package dominio;
  * Implementa la Interfaz Peleable.
  */
 
-public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
+ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	/**
 	 * Numero que sirve de argumento para obtener la dificultad.
 	 */

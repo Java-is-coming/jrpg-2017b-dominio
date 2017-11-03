@@ -8,7 +8,7 @@ package dominio;
 	 * pasándole los argumentos recibidos
 	 * por el constructor hijo
 	 */
-public class Guerrero extends Casta {
+ public class Guerrero extends Casta {
 	/**
 	 * Energia minima requerida para realizar una habilidad.
 	 */

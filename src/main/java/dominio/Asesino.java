@@ -11,7 +11,7 @@ package dominio;
  * variable nombreCasta
  */
 
-public class Asesino extends Casta {
+ public class Asesino extends Casta {
 	/**
 	 * Energia minima necesario para realizar una habilidad.
 	 */
@@ -51,7 +51,7 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 }
 	/** El constructor por defecto, llama al constructor por defecto.
 	 * padre (Casta), inicializando probabilidadGolpeCritico,
-	 *  probabilidadEvitarDaño, dañoCritico,
+	 *  probabilidadEvitarDanio, danioCritico,
 	 * con valores predeterminados.
 	 */
 	public Asesino() {
@@ -84,7 +84,7 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado((int) (caster.getAtaque() * caster.getCasta().getDañoCritico())) > 0) {
+			if (atacado.serAtacado((int) (caster.getAtaque() * caster.getCasta().getDanioCritico())) > 0) {
 				return true;
 			}
 		}
@@ -104,7 +104,7 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 * @param caster Personaje que realiza el ataque,
 	 * en este caso no es un ataque si no un aumento en
 	 * las caracteristicas del caster en este caso
-	 * incrementa el atributo probabilidadEvitarDaño
+	 * incrementa el atributo probabilidadEvitarDanio
 	 * @param atacado no cumple función alguna
 	 * dentro de este método
 	 * @return retorna si el ataque fue realizado
@@ -114,10 +114,10 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (this.getProbabilidadEvitarDaño() + AUMENTARPROBEVITAR < 0.5) {
-				this.aumentarEvitarDaño(AUMENTARPROBEVITAR);
+			if (this.getProbabilidadEvitarDanio() + AUMENTARPROBEVITAR < 0.5) {
+				this.aumentarEvitarDanio(AUMENTARPROBEVITAR);
 			} else {
-				this.setProbabilidadEvitarDaño(PROBEVITARDANIO);
+				this.setProbabilidadEvitarDanio(PROBEVITARDANIO);
 			}
 			return true;
 		}

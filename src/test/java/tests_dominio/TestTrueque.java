@@ -16,7 +16,7 @@ import dominio.Personaje;
 
 
 
-public class TestTrueque {
+ public class TestTrueque {
 
 	@Test
 	public void testTrueque() {

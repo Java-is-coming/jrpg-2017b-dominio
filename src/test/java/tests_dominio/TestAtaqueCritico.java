@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import dominio.*;
 
-public class TestAtaqueCritico {
+ public class TestAtaqueCritico {
 
 	@Test
 	public void testgolpeCrit(){

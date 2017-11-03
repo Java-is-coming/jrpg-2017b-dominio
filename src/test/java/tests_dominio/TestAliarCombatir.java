@@ -8,7 +8,7 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
-public class TestAliarCombatir {
+ public class TestAliarCombatir {
 
 	@Test
 	public void testCrearAlianza(){

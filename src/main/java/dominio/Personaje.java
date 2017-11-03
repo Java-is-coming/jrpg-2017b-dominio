@@ -342,13 +342,13 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		return clan;
 	}
 	/**Metodo void que sobreescribe el atributo clan.
-	 * Añade al personaje llamador al clan enviado
+	 * Aniade al personaje llamador al clan enviado
 	 * como parámetro.
 	 * @param clan Nueva del personaje.
 	 */
 	public final void setClan(final Alianza clan) {
 		this.clan = clan;
-		clan.añadirPersonaje(this);
+		clan.aniadirPersonaje(this);
 	}
 	/**Retorna entero con la salud del personaje.
 	 * @return Salud del personaje
@@ -449,14 +449,14 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/** Metodo que retorna un entero.
 	 * Que depende a que casta pertenece el
-	 * personaje y que ataque poseaa. El daño critico se
+	 * personaje y que ataque poseaa. El danio critico se
 	 * obtiene de la clase casta.
 	 * El entero surge de la multiplicacion del ataque del personaje y
-	 * el daño critico de la casta que pertenece.
+	 * el danio critico de la casta que pertenece.
 	 * @return Retorna el golpe critico que puede realizar el personaje.
 	 */
 	public final int golpe_critico() {
-		return (int) (this.ataque * this.getCasta().getDañoCritico());
+		return (int) (this.ataque * this.getCasta().getDanioCritico());
 	}
 	/**
 	 * Metodo no implementado.
@@ -543,13 +543,13 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	/** Método implementado de la Interface Peleable.
 	 * Retornará un valor entero dependiendo del resultado
 	 * de las comparaciones, si el número generado con la
-	 * clase MyRandom es mayor a la probabilidad de evitar daño,
+	 * clase MyRandom es mayor a la probabilidad de evitar danio,
      * La cual depende de la casta del Personaje, entonces no podrá
 	 * evitarse el ataque, se descontará el valor del argumento
-	 * daño al atributo salud.
+	 * danio al atributo salud.
 	 * Si el valor del atributo salud es menor al valor
-	 * del argumento daño, se procederá a igualar el
-	 * atributo salud a 0 y retornar el daño realziado
+	 * del argumento danio, se procederá a igualar el
+	 * atributo salud a 0 y retornar el danio realziado
 	 * (que será igual a la salud antes de que esté en 0)
 	 * @param danio valor a descontarse del atributo salud
 	 * @return Retorna si el Personaje peude ser atacado.
@@ -557,7 +557,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	@Override
 	public final int serAtacado(int danio) {
 
-		if (this.getRandom().nextDouble() >= this.getCasta().getProbabilidadEvitarDaño()) {
+		if (this.getRandom().nextDouble() >= this.getCasta().getProbabilidadEvitarDanio()) {
 			danio -= this.getDefensa();
 			if (danio > 0) {
 				if (salud <= danio) {
@@ -574,12 +574,12 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**Metodo que retorna un entero de los puntos de salud quitados
-	 * al personaje. Al daño total recibido se le resta
-	 * la defensa del personaje. Si este daño es menor o igual
-	 * a la salud del personaje se le quita daño puntos de salud.
-	 * Si el daño es mayor a la salud se establece la salud del
+	 * al personaje. Al danio total recibido se le resta
+	 * la defensa del personaje. Si este danio es menor o igual
+	 * a la salud del personaje se le quita danio puntos de salud.
+	 * Si el danio es mayor a la salud se establece la salud del
 	 * personaje en 0.
-	 * @param danio Daño causado al personaje
+	 * @param danio Danio causado al personaje
 	 * @return Retorna los puntos de vida quitados al personaje
 	 */
 	public final int serRobadoSalud(int danio) {
@@ -596,11 +596,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		return danio;
 	}
 	/**Metodo que retorna los puntos de energia quitados
-	 * al personaje. Al daño total ejercido al personaje
-	 * se le resta la defensa del mismo. Si este daño es
+	 * al personaje. Al danio total ejercido al personaje
+	 * se le resta la defensa del mismo. Si este danio es
 	 * menor o igual a la energia del personaje se le
 	 * resta al mismo, sino se establece energia como 0.
-	 * @param danio Daño causado al personaje
+	 * @param danio Danio causado al personaje
 	 * @return Retorna los puntos de energia quitados al personaje.
 	 */
 	public final int serDesernegizado(int danio) {
@@ -641,13 +641,13 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		}
 	}
 	/**Metodo void que crea una nueva alianza. Asigna a ésta
-	 * al clan actual del personaje y lo añade a la lista de
+	 * al clan actual del personaje y lo aniade a la lista de
 	 * Personajes que integran la alianza.
 	 * @param nombreAlianza Nombre de la alianza
 	 */
 	public final void crearAlianza(final String nombreAlianza) {
 		this.clan = new Alianza(nombreAlianza);
-		this.clan.añadirPersonaje(this);
+		this.clan.aniadirPersonaje(this);
 	}
 	/**Metodo void que desvincula al personaje de la alianza
 	 * y establece que el personaje no pertenece a ninguna.
@@ -658,25 +658,25 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 			this.clan = null;
 		}
 	}
-	/**Metodo que retorna un boolean si pudo añadir un nuevo
+	/**Metodo que retorna un boolean si pudo aniadir un nuevo
 	 * aliado a la alianza en la que se encuentra el personaje.
 	 * Si el personaje llamador no pertenece a ninguna alianza
 	 * se crea una con el nombre "Alianza 1" por defecto.
 	 * Luego se agrega al nuevo aliado enviado como parametro
 	 * a la alianza del personaje llamador.
-	 * @param nuevoAliado Personaje que se añadira al clan del llamador
+	 * @param nuevoAliado Personaje que se aniadira al clan del llamador
 	 * @return	Boolean si pudo agregar al nuevo aliado
 	 */
 	public final boolean aliar(final Personaje nuevoAliado) {
 		if (this.clan == null) {
 			Alianza a = new Alianza("Alianza 1");
 			this.clan = a;
-			a.añadirPersonaje(this);
+			a.aniadirPersonaje(this);
 		}
 
 		if (nuevoAliado.clan == null) {
 			nuevoAliado.clan = this.clan;
-			this.clan.añadirPersonaje(nuevoAliado);
+			this.clan.aniadirPersonaje(nuevoAliado);
 			return true;
 		} else {
 			return false;
@@ -959,7 +959,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		salud = map.get("salud").intValue();
 		energia = map.get("energia").intValue();
 		defensa = map.get("defensa").intValue();
-		casta.setProbabilidadEvitarDaño(map.get("probEvitarDanio").doubleValue());
+		casta.setProbabilidadEvitarDanio(map.get("probEvitarDanio").doubleValue());
 	}
 	/**
 	 * Método que realiza el trueque de items.

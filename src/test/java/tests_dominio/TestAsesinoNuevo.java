@@ -8,7 +8,7 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Personaje;
 
-public class TestAsesinoNuevo {
+ public class TestAsesinoNuevo {
 
 	@Test
 	public void testHabilidad1() {
