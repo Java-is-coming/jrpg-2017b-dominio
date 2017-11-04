@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
  * Clase que representa los Items que posee el personaje.
  */
 public class Item implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int idItem;
     private String nombre;
     private int wearLocation;
@@ -27,7 +28,7 @@ public class Item implements Serializable {
 
     /**
      * Constructor del Item.
-     * 
+     *
      * @param idItem
      *            Entero que representa el id del item.
      * @param nombre
@@ -69,6 +70,9 @@ public class Item implements Serializable {
         this.inteligenciarequerida = 0;
     }
 
+    /**
+     * Constructor vacio
+     */
     public Item() {
         this.foto = "";
         this.idItem = 0;
@@ -87,7 +91,7 @@ public class Item implements Serializable {
 
     /**
      * Método que retorna la foto del item.
-     * 
+     *
      * @return retorna la foto del item.
      * @throws IOException
      *             Cuando no se encuentra la foto del item.
@@ -97,106 +101,249 @@ public class Item implements Serializable {
         return ImageIO.read(new File("recursos//" + foto));
     }
 
+    /**
+     * Get id item
+     *
+     * @return int id item
+     */
     public int getIdItem() {
         return idItem;
     }
 
+    /**
+     * Set id item
+     *
+     * @param idItem
+     *            int
+     */
     public void setIdItem(final int idItem) {
         this.idItem = idItem;
     }
 
+    /**
+     * Get foto
+     *
+     * @return String foto
+     */
     public String getFoto() {
         return foto;
     }
 
+    /**
+     * Set foto
+     *
+     * @param foto
+     *            string
+     */
     public void setFoto(final String foto) {
         this.foto = foto;
     }
 
+    /**
+     * Get nombre
+     *
+     * @return nombre string
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Set nombre
+     *
+     * @param nombre
+     *            string
+     */
     public void setNombre(final String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Get wear location
+     *
+     * @return int location
+     */
     public int getWearLocation() {
         return wearLocation;
     }
 
+    /**
+     * Set wear location
+     *
+     * @param wearLocation
+     *            int
+     */
     public void setWearLocation(final int wearLocation) {
         this.wearLocation = wearLocation;
     }
 
+    /**
+     * Get bonus salud
+     *
+     * @return int salud
+     */
     public int getBonusSalud() {
         return bonusSalud;
     }
 
+    /**
+     * Set bonus salud
+     *
+     * @param bonusSalud
+     *            int
+     */
     public void setBonusSalud(final int bonusSalud) {
         this.bonusSalud = bonusSalud;
     }
 
+    /**
+     * Get bonus energia
+     *
+     * @return int bonus
+     */
     public int getBonusEnergia() {
         return bonusEnergia;
     }
 
+    /**
+     * Set bonus energia
+     *
+     * @param bonusEnergia
+     *            int
+     */
     public void setBonusEnergia(final int bonusEnergia) {
         this.bonusEnergia = bonusEnergia;
     }
 
+    /**
+     * Get bonus fuerza
+     *
+     * @return int bonus fuerza
+     */
     public int getBonusFuerza() {
         return bonusFuerza;
     }
 
+    /**
+     * Set bonus fuerza
+     *
+     * @param bonusFuerza
+     *            int
+     */
     public void setBonusFuerza(final int bonusFuerza) {
         this.bonusFuerza = bonusFuerza;
     }
 
+    /**
+     * Get bonus fuerza
+     *
+     * @return int bonus fuerza
+     */
     public int getBonusDestreza() {
         return bonusDestreza;
     }
 
+    /**
+     * Set bonus destreza
+     *
+     * @param bonusDestreza
+     *            int
+     */
     public void setBonusDestreza(final int bonusDestreza) {
         this.bonusDestreza = bonusDestreza;
     }
 
+    /**
+     * Get bonus inteligencia
+     *
+     * @return int bonus inteligencia
+     */
     public int getBonusInteligencia() {
         return bonusInteligencia;
     }
 
+    /**
+     * Set bonus inteligencia
+     *
+     * @param bonusInteligencia
+     *            int
+     */
     public void setBonusInteligencia(final int bonusInteligencia) {
         this.bonusInteligencia = bonusInteligencia;
     }
 
+    /**
+     * Fuerza requerida
+     *
+     * @return int fuerzaRequerida
+     */
     public int getFuerzaRequerida() {
         return fuerzaRequerida;
     }
 
+    /**
+     * Set fuerza requerida
+     *
+     * @param fuerzaRequerida
+     *            int
+     */
     public void setFuerzaRequerida(final int fuerzaRequerida) {
         this.fuerzaRequerida = fuerzaRequerida;
     }
 
+    /**
+     * Destreza requerida
+     *
+     * @return int destrezaRequerida
+     */
     public int getDestrezaRequerida() {
         return destrezaRequerida;
     }
 
+    /**
+     * Set destreza requerida
+     *
+     * @param destrezaRequerida
+     *            int
+     */
     public void setDestrezaRequerida(final int destrezaRequerida) {
         this.destrezaRequerida = destrezaRequerida;
     }
 
+    /**
+     * Foto item equipado
+     *
+     * @return String foto
+     */
     public String getFotoEquipado() {
         return fotoEquipado;
     }
 
+    /**
+     * Set foto item equipado
+     *
+     * @param fotoEquipado
+     *            string
+     */
     public void setFotoEquipado(final String fotoEquipado) {
         this.fotoEquipado = fotoEquipado;
     }
 
+    /**
+     * Inteligencia requerida
+     *
+     * @return int inteligencia req
+     */
     public int getInteligenciarequerida() {
         return inteligenciarequerida;
     }
 
+    /**
+     * Set inteligencia requerida
+     *
+     * @param inteligenciarequerida
+     *            int
+     */
     public void setInteligenciarequerida(final int inteligenciarequerida) {
         this.inteligenciarequerida = inteligenciarequerida;
     }
