@@ -6,7 +6,7 @@ import java.util.Random;
  *
  * Clase que se utiliza para obtener números aleatoreos.
  */
-public class MyRandom extends RandomGenerator {
+ public class MyRandom extends RandomGenerator {
 
 
 

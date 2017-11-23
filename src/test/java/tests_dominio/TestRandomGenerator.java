@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import dominio.RandomGenerator;
 
-public class TestRandomGenerator {
+ public class TestRandomGenerator {
 
 	@Test
 	public void test() {

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import dominio.*;
 
-public class TestSubirNivel {
+ public class TestSubirNivel {
 
 	@Test
 	public void testSubirdeNivel() {

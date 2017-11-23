@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import dominio.Alianza;
 
-public class TestAlianzaNuevo {
+ public class TestAlianzaNuevo {
 
 	
 	@Test

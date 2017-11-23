@@ -11,7 +11,7 @@ import dominio.Humano;
 import dominio.Orco;
 import dominio.Personaje;
 
-public class TestRefactoreoAtributos {
+ public class TestRefactoreoAtributos {
 
 	@Test
 	public void testDestrezaAsesino() {

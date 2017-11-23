@@ -2,7 +2,7 @@ package dominio;
 /**
  * Clase con proposito de testing ya que se fijan sus valores.
  */
-public class MyRandomStub extends RandomGenerator {
+ public class MyRandomStub extends RandomGenerator {
 	/**
 	 * Valor que devolverá nextDouble().
 	 */

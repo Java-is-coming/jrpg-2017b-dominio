@@ -8,7 +8,7 @@ import dominio.Humano;
 import dominio.Personaje;
 
 
-public class TestMadreDeTodo {
+ public class TestMadreDeTodo {
 
 	
 	@Test

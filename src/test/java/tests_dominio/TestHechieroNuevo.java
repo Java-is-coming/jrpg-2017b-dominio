@@ -10,7 +10,7 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
-public class TestHechieroNuevo {
+ public class TestHechieroNuevo {
 
 	@Test
 	public void testHabilidad3() {

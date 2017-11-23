@@ -5,7 +5,7 @@ package dominio;
  * Completa ciertos atributos que estaban declarados en
  * la clase Personaje, como por ejemplo habilidadesRaza[]
 */
-public class Elfo extends Personaje {
+ public class Elfo extends Personaje {
 	/**
 	 * Energia minima que se necesita para realizar una habilidad.
 	 */

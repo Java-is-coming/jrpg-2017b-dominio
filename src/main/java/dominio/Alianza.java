@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**La clase Alianza tiene como función agrupar a los jugadores.
  * mediante una LinkedList de Personajes
  */
-public class Alianza {
+ public class Alianza {
 	/**
 	 * Nombre que tendra la alianza.
 	 */
@@ -53,7 +53,7 @@ public class Alianza {
 	 * Utilizando el método add() de la LinkedList
 	 * @param pj Personaje a agregarse a la lista de aliados
 	 */
-	public final void añadirPersonaje(final Personaje pj) {
+	public final void aniadirPersonaje(final Personaje pj) {
 		aliados.add(pj);
 	}
 }

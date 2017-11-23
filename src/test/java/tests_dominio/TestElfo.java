@@ -8,7 +8,7 @@ import dominio.Elfo;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
-public class TestElfo {
+ public class TestElfo {
 
 	@Test
 	public void testGolpeLevel() {

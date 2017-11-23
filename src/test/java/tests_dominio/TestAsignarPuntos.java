@@ -7,7 +7,7 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.Personaje;
 
-public class TestAsignarPuntos {
+ public class TestAsignarPuntos {
 
 	@Test
 	public void testAumentarSalud_tope(){

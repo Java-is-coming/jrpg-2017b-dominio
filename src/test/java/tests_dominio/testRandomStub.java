@@ -6,7 +6,7 @@ import org.junit.Test;
 import dominio.MyRandomStub;
 import dominio.RandomGenerator;
 
-public class testRandomStub {
+ public class testRandomStub {
 
 	@Test
 	public void test() {

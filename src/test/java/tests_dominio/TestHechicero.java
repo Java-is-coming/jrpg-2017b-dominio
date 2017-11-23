@@ -9,7 +9,7 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
-public class TestHechicero {
+ public class TestHechicero {
 
 	@Test
 	public void testCurar() {

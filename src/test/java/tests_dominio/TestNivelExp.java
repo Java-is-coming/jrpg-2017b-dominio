@@ -7,7 +7,7 @@ import dominio.Asesino;
 import dominio.Humano;
 import dominio.Personaje;
 
-public class TestNivelExp {
+ public class TestNivelExp {
 
 	@Test
 	public void testGanarExp() {

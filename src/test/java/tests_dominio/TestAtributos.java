@@ -5,7 +5,7 @@ import org.junit.Test;
 import dominio.*;
 import org.junit.Assert;
 
-public class TestAtributos {
+ public class TestAtributos {
 
 	@Test
 	public void testIncrementarFuerza() {
